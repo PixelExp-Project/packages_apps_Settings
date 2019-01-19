@@ -128,6 +128,10 @@
     <string name="dialog_delete_message">Remove selected item?</string>
     <string name="profile_choose_app">Choose app</string>
 
+    <!-- Battery temp -->
+    <string name="battery_temp_title">Battery temperature</string>
+    <string name="battery_temp_summary">Tap to switch scale</string>
+
     <!-- QS tile styles -->
     <string name="qs_tile_style_title">QS tile style</string>
     <string name="qstile_default">Default</string>
