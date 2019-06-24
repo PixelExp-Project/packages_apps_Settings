@@ -147,4 +147,6 @@
     <string name="lockscreen_small_clock_title">Force small clock</string>
     <string name="lockscreen_small_clock_summary">Don\'t switch to the big clock when there are no notifications</string>
 
+    <string name="private_dns_mode_cloudflare" translatable="false">Cloudflare DNS</string>
+
 </resources>
