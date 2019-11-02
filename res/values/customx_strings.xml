@@ -109,4 +109,8 @@
     <!-- Show old style mobile data icon -->
     <string name="use_old_mobiletype_title">Use old style mobile data icons</string>
     <string name="use_old_mobiletype_summary">Show mobile type icon on top of the signal indicator</string>
+
+    <!-- Pulse on music track change -->
+    <string name="pulse_on_new_tracks_title">Ambient music ticker</string>
+    <string name="pulse_on_new_tracks_summary">Show Ambient Display when a new music track is played</string>
 </resources>
