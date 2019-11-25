@@ -99,6 +99,7 @@
     <string name="qs_themes_category_title">QS Themes</string>
     <string name="qs_bg_use_new_tint">Tint QS tiles using accent color</string>
     <string name="qs_bg_use_new_tint_summary">Enable the accent color tint on the QS tiles</string>
+    <string name="qs_panel_alpha_title">Background opacity</string>
 
     <!-- Used for diagnostic info screens, precise translation isn't needed. Formats the SD card in the phone, meaning it will be erased and reformatted [CHAR LIMIT=25] -->
     <string name="sdcard_format" product="nosdcard">Erase USB storage</string>
