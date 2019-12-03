@@ -30,6 +30,18 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="custom_notification_settings_category"
+        android:title="@string/custom_notification_settings">
+
+	 <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="notification_sound_vib_screen_on"
+            android:title="@string/notification_sound_vib_screen_on_title"
+            android:summary="@string/notification_sound_vib_screen_on_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="incall_vib_options"
         android:title="@string/incall_vibration_category" >
 

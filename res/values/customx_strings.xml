@@ -7,6 +7,7 @@
     <string name="custom_settings_title">Custom Settings</string>
     <string name="custom_settings_summary">Minimal Customization</string>
     <string name="custom_statusbar_settings">Status Bar</string>
+    <string name="custom_notification_settings">Notification</string>
 
     <!-- Status bar items -->
     <string name="statusbar_items_category">Status bar items</string>
@@ -20,4 +21,8 @@
     <string name="incall_vibrate_connect_title">Vibrate on connect</string>
     <string name="incall_vibrate_call_wait_title">Vibrate on call waiting</string>
     <string name="incall_vibrate_disconnect_title">Vibrate on disconnect</string>
+
+    <!-- Annoying Notifications -->
+    <string name="notification_sound_vib_screen_on_title">Annoying Notifications</string>
+    <string name="notification_sound_vib_screen_on_summary">Play sound and vibration for notifications when screen is on</string>
 </resources>
