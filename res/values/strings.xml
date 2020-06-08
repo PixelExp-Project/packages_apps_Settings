@@ -69,6 +69,12 @@
     <string name="wifi_timeout_summary_4hours">4 hours</string>
     <string name="wifi_timeout_summary_8hours">8 hours</string>
 
+    <!-- Ambient music ticker location -->
+    <string name="ambient_music_location">Show ambient music ticker</string>
+    <string name="ambient_music_disabled">Disabled</string>
+    <string name="ambient_music_bottom">At the bottom (default)</string>
+    <string name="ambient_music_center">Centered (under the cLock)</string>
+
     <!-- Gaming mode -->
     <string name="gaming_mode_title">Gaming Mode</string>
     <string name="gaming_mode_summary">Customize gaming mode preferences</string>
