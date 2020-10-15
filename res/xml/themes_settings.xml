@@ -29,7 +29,7 @@
             android:title="@string/theme_customization_font_title"/>
 
         <ListPreference
-            android:key="android.theme.customization.icon_pack.android"
+            android:key="android.theme.customization.icon_pack"
             android:title="@string/theme_customization_sysui_icon_title"/>
 
         <com.android.settings.custom.preference.SystemSettingListPreference
