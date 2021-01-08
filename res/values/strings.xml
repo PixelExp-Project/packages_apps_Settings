@@ -12484,8 +12484,14 @@
     <string name="bluetooth_phonebook_access_dialog_title">Allow access to contacts and call log?</string>
     <!-- Bluetooth phonebook permission alert for dialog content [CHAR LIMIT=none] -->
     <string name="bluetooth_phonebook_access_dialog_content">An untrusted Bluetooth device, <xliff:g id="device_name" example="My device">%1$s</xliff:g>, wants to access your contacts and call log. This includes data about incoming and outgoing calls.\n\nYou haven\u2019t connected to <xliff:g id="device_name" example="My device">%2$s</xliff:g> before.</string>
+
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the statusbar icon -->
     <string name="theme_customization_sysui_icon_title">Icon pack</string>
+
     <!-- Cloudflare DNS -->
     <string name="private_dns_mode_cloudflare" translatable="false">Cloudflare DNS</string>
+
+    <!-- global cleartext network traffic -->
+    <string name="cleartext_network_policy_title">Restrict cleartext network traffic</string>
+    <string name="cleartext_network_policy_summary">Blocks all non-TLS network traffic. Requires Private DNS configuration. Note: Without explicit exemptions, Tor and most VPNs won\'t work</string>
 </resources>
