@@ -73,6 +73,9 @@
     <!-- Phone Info screen. Status label.  Used for diagnostic info screens, precise translation isn't needed -->
     <string name="radioInfo_service_off">Radio Off</string>
 
+    <!-- Notification background opacity -->
+    <string name="notification_alpha_title">Notification background alpha</string>
+
     <!-- Phone Info screen. Status label.  Used for diagnostic info screens, precise translation isn't needed -->
     <string name="radioInfo_roaming_in">Roaming</string>
     <!-- Phone Info screen. Status label.  Used for diagnostic info screens, precise translation isn't needed -->
