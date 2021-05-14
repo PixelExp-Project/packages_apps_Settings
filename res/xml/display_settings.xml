@@ -265,4 +265,19 @@
             android:entryValues="@array/theming_settings_dashboard_icons_values"
             android:defaultValue="0" />
     </PreferenceCategory>
+
+    <!-- LockScreen Settings -->
+    <PreferenceCategory
+        android:title="@string/lockscreen_theme">
+
+        <com.android.settings.custom.preference.SystemSettingSeekBarPreference
+            android:key="lockscreen_blur"
+            android:title="@string/lockscreen_blur_title"
+            android:summary="@string/lockscreen_blur_summary"
+            android:defaultValue="0"
+            settings:defaultValueText="@string/disabled"
+            android:max="100"
+            settings:min="0"
+            settings:units="%" />
+    </PreferenceCategory>
 </PreferenceScreen>
