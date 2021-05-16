@@ -55,6 +55,12 @@
         settings:controller="com.android.settings.display.AutoBrightnessPreferenceController"/>
 
     <Preference
+        android:key="themes"
+        android:title="@string/themes_title"
+        android:summary="@string/themes_summary"
+        android:fragment="com.android.settings.display.ThemeSettings" />
+
+    <Preference
         android:key="livedisplay"
         android:title="@*android:string/live_display_title"
         android:summary="@string/live_display_summary"
@@ -209,75 +215,4 @@
         android:title="@string/display_vr_pref_title"
         android:fragment="com.android.settings.display.VrDisplayPreferencePicker" />
 
-    <!-- QS Themes -->
-    <PreferenceCategory
-        android:key="quick_settings_category"
-        android:title="@string/qs_themes_category_title">
-
-    <com.android.settings.custom.preference.SystemSettingSwitchPreference
-            android:key="qs_panel_bg_use_new_tint"
-            android:title="@string/qs_bg_use_new_tint"
-            android:summary="@string/qs_bg_use_new_tint_summary"
-            android:defaultValue="true" />
-
-    <!-- QS panel opacity -->
-    <com.android.settings.custom.preference.SystemSettingSeekBarPreference
-            android:key="qs_panel_bg_alpha"
-            android:title="@string/qs_panel_alpha_title"
-            android:defaultValue="255"
-            android:max="255"
-            android:min="0"
-            settings:units="" />
-
-    <!-- Notification background opacity -->
-    <com.android.settings.custom.preference.SystemSettingSeekBarPreference
-            android:key="notification_bg_alpha"
-            android:title="@string/notification_alpha_title"
-            android:defaultValue="255"
-            android:max="255"
-            settings:min="0"
-            settings:units="" />
-
-    </PreferenceCategory>
-
-    <!-- Gvisual mod -->
-    <PreferenceCategory 
-        android:key="gvisual_category"
-        android:title="@string/gvisual_title">
-
-        <PreferenceScreen
-            android:key="gvisual"
-            android:title="@string/gvisual_title"
-            android:summary="@string/gvisual_summary"
-            android:fragment="com.android.settings.display.GvisualSettings" />
-
-    </PreferenceCategory>
-
-    <!-- Settings DashBoard -->
-    <PreferenceCategory
-        android:title="@string/settings_dashboard_title">
-
-        <!-- Settings dashboard icon style -->
-        <com.android.settings.custom.preference.SystemSettingIntListPreference
-            android:key="theming_settings_dashboard_icons"
-            android:title="@string/theming_settings_dashboard_icons_title"
-            android:entries="@array/theming_settings_dashboard_icons_entries"
-            android:entryValues="@array/theming_settings_dashboard_icons_values"
-            android:defaultValue="0" />
-    </PreferenceCategory>
-
-    <!-- LockScreen Settings -->
-    <PreferenceCategory
-        android:title="@string/lockscreen_theme">
-
-        <com.android.settings.custom.preference.SystemSettingSeekBarPreference
-            android:key="lockscreen_blur"
-            android:title="@string/lockscreen_blur_title"
-            android:summary="@string/lockscreen_blur_summary"
-            android:defaultValue="0"
-            settings:defaultValueText="@string/disabled"
-            android:max="100"
-            settings:min="0"
-            settings:units="%" />
-    </PreferenceCategory>
 </PreferenceScreen>
