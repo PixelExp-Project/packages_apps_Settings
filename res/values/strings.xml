@@ -47,6 +47,7 @@
     <!-- RGB Accent Picker -->
     <string name="themes_title">Themes</string>
     <string name="themes_summary">Minimal Customisation</string>
+    <string name="theme_customization_accent_color_title">Accent color presets</string>
 
     <!-- gvisual mod -->
     <string name="gvisual_title">G-Visual Mod</string>

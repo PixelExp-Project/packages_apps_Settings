@@ -57,4 +57,17 @@ public class ThemeSettings extends DashboardFragment implements OnPreferenceChan
     protected int getPreferenceScreenResId() {
         return R.xml.themes_settings;
     }
+
+    @Override
+    protected List<AbstractPreferenceController> createPreferenceControllers(Context context) {
+        return buildPreferenceControllers(context, getSettingsLifecycle(), this);
+    }
+
+    private static List<AbstractPreferenceController> buildPreferenceControllers(
+            Context context, Lifecycle lifecycle, Fragment fragment) {
+        final List<AbstractPreferenceController> controllers = new ArrayList<>();
+        controllers.add(new OverlayCategoryPreferenceController(context,
+                "android.theme.customization.accent_color"));
+        return controllers;
+    }
 }

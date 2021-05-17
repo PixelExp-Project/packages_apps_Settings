@@ -20,6 +20,10 @@
         android:key="quick_settings_category"
         android:title="@string/qs_themes_category_title">
 
+        <ListPreference
+            android:key="android.theme.customization.accent_color"
+            android:title="@string/theme_customization_accent_color_title"/>
+
         <com.android.settings.custom.preference.SystemSettingSwitchPreference
             android:key="qs_panel_bg_use_new_tint"
             android:title="@string/qs_bg_use_new_tint"
