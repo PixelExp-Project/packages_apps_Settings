@@ -87,6 +87,13 @@
     <PreferenceCategory
         android:title="@string/lockscreen_theme">
 
+        <ListPreference
+            android:key="lock_screen_custom_clock_face"
+            android:summary="%s"
+            android:title="@string/lock_screen_custom_clock_face_title"
+            android:entries="@array/lock_screen_custom_clock_face_entries"
+            android:entryValues="@array/lock_screen_custom_clock_face_values" />
+
         <com.android.settings.custom.preference.SystemSettingSeekBarPreference
             android:key="lockscreen_blur"
             android:title="@string/lockscreen_blur_title"
