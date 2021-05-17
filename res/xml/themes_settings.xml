@@ -94,6 +94,12 @@
             android:entries="@array/lock_screen_custom_clock_face_entries"
             android:entryValues="@array/lock_screen_custom_clock_face_values" />
 
+        <com.android.settings.custom.preference.SystemSettingSwitchPreference
+            android:key="clock_show_status_area"
+            android:title="@string/clock_show_status_area"
+            android:summary="@string/clock_show_status_area_summary"
+            android:defaultValue="true" />
+
         <com.android.settings.custom.preference.SystemSettingSeekBarPreference
             android:key="lockscreen_blur"
             android:title="@string/lockscreen_blur_title"
