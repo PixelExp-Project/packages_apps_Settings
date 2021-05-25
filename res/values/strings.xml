@@ -65,6 +65,10 @@
     <string name="wifi_timeout_summary_4hours">4 hours</string>
     <string name="wifi_timeout_summary_8hours">8 hours</string>
 
+    <!-- Show old style mobile data icon -->
+    <string name="use_old_mobiletype_title">Use old style mobile data icons</string>
+    <string name="use_old_mobiletype_summary">Use pre-p mobiletype icons for signal</string>
+
     <!-- Lockscreen blur -->
     <string name="lockscreen_theme">LockScreen Themes</string>
     <string name="lockscreen_blur_title">Background blur</string>
