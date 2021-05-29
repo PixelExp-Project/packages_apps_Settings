@@ -6,7 +6,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.os.Bundle;
 import android.provider.Settings;
-
+import android.os.UserHandle;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.preference.*;
@@ -21,6 +21,7 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.search.SearchIndexable;
+import com.android.settings.utils.DeviceUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,20 +33,27 @@ public class ThemeSettings extends DashboardFragment implements OnPreferenceChan
 
     public static final String TAG = "ThemeSettings";
 
+    private static final String LOCKSCREEN_BLUR = "lockscreen_blur";
     private static final String CUSTOM_CLOCK_FACE = Settings.Secure.LOCK_SCREEN_CUSTOM_CLOCK_FACE;
     private static final String DEFAULT_CLOCK = "com.android.keyguard.clock.DefaultClockController";
 
     private ListPreference mLockClockStyles;
     private Context mContext;
+    private Preference mLockscreenBlur;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        PreferenceScreen prefSet = getPreferenceScreen();
         mContext = getActivity();
         mLockClockStyles = (ListPreference) findPreference(CUSTOM_CLOCK_FACE);
         String mLockClockStylesValue = getLockScreenCustomClockFace();
         mLockClockStyles.setValue(mLockClockStylesValue);
         mLockClockStyles.setSummary(mLockClockStyles.getEntry());
         mLockClockStyles.setOnPreferenceChangeListener(this);
+        mLockscreenBlur = (Preference) findPreference(LOCKSCREEN_BLUR);
+        if (!DeviceUtils.isBlurSupported()) {
+            prefSet.removePreference(mLockscreenBlur);
+        }
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -56,6 +64,12 @@ public class ThemeSettings extends DashboardFragment implements OnPreferenceChan
             return true;
         }
         return false;
+    }
+
+    public static void reset(Context mContext) {
+        ContentResolver resolver = mContext.getContentResolver();
+        Settings.System.putIntForUser(resolver,
+                Settings.System.LOCKSCREEN_BLUR, 0, UserHandle.USER_CURRENT);
     }
 
     private String getLockScreenCustomClockFace() {
