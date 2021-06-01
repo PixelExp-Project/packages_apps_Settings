@@ -106,6 +106,12 @@
             android:summary="@string/clock_show_status_area_summary"
             android:defaultValue="true" />
 
+        <com.android.settings.custom.preference.SystemSettingSwitchPreference
+            android:key="lockscreen_battery_info"
+            android:title="@string/lockscreen_battery_info_title"
+            android:summary="@string/lockscreen_battery_info_summary"
+            android:defaultValue="true" />
+
         <com.android.settings.custom.preference.SystemSettingSeekBarPreference
             android:key="lockscreen_blur"
             android:title="@string/lockscreen_blur_title"

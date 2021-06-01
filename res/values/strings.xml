@@ -125,6 +125,10 @@
     <string name="show_app_volume_title">Show app volume</string>
     <string name="show_app_volume_summary">Show app volume in volume panel</string>
 
+    <!-- Lock screen battery info indicator -->
+    <string name="lockscreen_battery_info_title">Lock screen charging info</string>
+    <string name="lockscreen_battery_info_summary">Show charging current, voltage, wattage and battery temperature on lock screen while charging</string>
+
     <!-- Lock screen Clocks -->
     <string name="clock_show_status_area">Show status area (weather etc.)</string>
     <string name="clock_show_status_area_summary">Show the extra row of info under the lock screen clock (SysUI restart may be required)</string>
