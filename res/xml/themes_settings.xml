@@ -24,11 +24,13 @@
             android:key="android.theme.customization.accent_color"
             android:title="@string/theme_customization_accent_color_title"/>
 
-        <com.android.settings.custom.preference.SystemSettingSwitchPreference
+        <com.android.settings.custom.preference.SystemSettingListPreference
             android:key="qs_panel_bg_use_new_tint"
-            android:title="@string/qs_bg_use_new_tint"
-            android:summary="@string/qs_bg_use_new_tint_summary"
-            android:defaultValue="true" />
+            android:title="@string/qs_tint_title"
+            android:dialogTitle="@string/qs_tint_title"
+            android:entries="@array/qs_tint_entries"
+            android:entryValues="@array/qs_tint_values"
+            android:defaultValue="0" />
 
         <!-- QS panel opacity -->
         <com.android.settings.custom.preference.SystemSettingSeekBarPreference
