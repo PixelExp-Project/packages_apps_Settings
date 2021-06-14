@@ -23,6 +23,8 @@ import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.settings.utils.DeviceUtils;
 
+import com.android.settings.display.QsTileStylePreferenceController;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -121,6 +123,7 @@ public class ThemeSettings extends DashboardFragment implements OnPreferenceChan
         final List<AbstractPreferenceController> controllers = new ArrayList<>();
         controllers.add(new OverlayCategoryPreferenceController(context,
                 "android.theme.customization.accent_color"));
+        controllers.add(new QsTileStylePreferenceController(context));
         return controllers;
     }
 }
