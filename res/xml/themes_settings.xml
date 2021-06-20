@@ -147,4 +147,15 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/gaming_mode_title">
+
+        <com.android.settings.custom.preference.SystemSettingMasterSwitchPreference
+           android:key="gaming_mode_enabled"
+           android:fragment="com.android.settings.fragments.GamingMode"
+           android:title="@string/gaming_mode_title"
+           android:summary="@string/gaming_mode_summary"
+           android:defaultValue="false" />
+    </PreferenceCategory>
+
 </PreferenceScreen>

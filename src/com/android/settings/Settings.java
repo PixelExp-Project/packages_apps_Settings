@@ -244,4 +244,6 @@ public class Settings extends SettingsActivity {
     // LiveDisplay
     public static class LiveDisplaySettingsActivity extends SettingsActivity { /* empty */ }
 
+    // Gaming Mode
+    public static class GamingModeActivity extends SettingsActivity {}
 }
