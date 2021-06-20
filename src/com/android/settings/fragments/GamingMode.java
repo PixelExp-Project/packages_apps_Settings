@@ -63,6 +63,7 @@ public class GamingMode extends SettingsPreferenceFragment
 
     private static final int DIALOG_GAMING_APPS = 1;
     private static final String GAMING_MODE_HW_KEYS = "gaming_mode_hw_keys_toggle";
+    private static final String GAMING_MODE_FOOTER = "gaming_mode_footer";
 
     private SwitchPreference mHardwareKeysDisable;
 
@@ -81,7 +82,7 @@ public class GamingMode extends SettingsPreferenceFragment
         // Get launch-able applications
         addPreferencesFromResource(R.xml.gaming_mode_settings);
 
-        // mFooterPreferenceMixin.createFooterPreference().setTitle(R.string.add_gaming_mode_package_summary);
+        findPreference(GAMING_MODE_FOOTER).setTitle(R.string.add_gaming_mode_package_summary);
 
         final PreferenceScreen prefScreen = getPreferenceScreen();
 

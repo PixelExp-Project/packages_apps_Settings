@@ -52,6 +52,14 @@
         android:order="-248"
         android:fragment="com.android.settings.custom.statusbar.StatusBarSettings" />
 
+    <!-- Game Mode -->
+    <Preference
+        android:key="gaming_mode"
+        android:icon="@drawable/ic_gaming_mode"
+        android:fragment="com.android.settings.fragments.GamingMode"
+        android:title="@string/gaming_mode_title"
+        android:summary="@string/gaming_mode_summary" />
+
     <Preference
         android:key="date_time_settings"
         android:title="@string/date_and_time"
