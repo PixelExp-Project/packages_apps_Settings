@@ -121,12 +121,6 @@
             settings:controller="com.android.settings.display.PulseOnNewTracksPreferenceController" />
 
         <SwitchPreference
-            android:key="pulse_on_new_tracks_soli"
-            android:title="@string/pulse_on_new_tracks_title"
-            android:summary="@string/pulse_on_new_tracks_soli_summary"
-            settings:controller="com.android.settings.display.PulseOnNewTracksSoliPreferenceController" />
-
-        <SwitchPreference
             android:key="ambient_wake_gestures"
             android:title="@string/ambient_wake_gestures_title"
             android:summary="@string/ambient_wake_gestures_summary"
