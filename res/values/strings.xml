@@ -214,6 +214,8 @@
     <string name="navbar_orchid">Orchid</string>
     <string name="navbar_red">Red</string>
     <string name="navbar_purp">Purple</string>
+    <string name="navbar_blue">Blue</string>
+    <string name="navbar_rose">Rose</string>
 
     <!-- [CHAR LIMIT=NONE] Toast message when user attemps to launch developer otions before enabling it. -->
     <string name="dev_settings_disabled_warning">Please enable developer options first.</string>
