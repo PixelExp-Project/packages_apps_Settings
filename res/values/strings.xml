@@ -88,6 +88,10 @@
     <string name="data_disabled_icon_title">Show data disabled icon</string>
     <string name="data_disabled_icon_summary">Display the cross sign next to signal bar when data is disabled</string>
 
+    <!-- USB configuration -->
+    <string name="usb_default_config_title">USB configuration</string>
+    <string name="usb_default_config_summary">Choose the default behavior when connected to a device via USB</string>
+
     <!-- Game mode -->
     <string name="gaming_mode_title">Game Mode</string>
     <string name="gaming_mode_summary">Game Optimization</string>
