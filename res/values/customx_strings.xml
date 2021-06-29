@@ -79,4 +79,8 @@
     <!-- Toast app icon -->
     <string name="toast_icon_title">Toast app icon</string>
     <string name="toast_icon_summary">Display the app\'s icon corresponding with the toast</string>
+
+    <!-- USB configuration -->
+    <string name="usb_default_config_title">USB configuration</string>
+    <string name="usb_default_config_summary">Choose the default behavior when connected to a device via USB</string>
 </resources>
