@@ -249,6 +249,8 @@
     <string name="lock_screen_custom_clock_face_shapeshift">ShapeShift</string>
     <string name="lock_screen_custom_clock_face_typographic">Typographic</string>
     <string name="lock_screen_custom_clock_face_octavi">Octavi</string>
+    <string name="lock_screen_custom_clock_face_android_s">Android S</string>
+    <string name="lock_screen_custom_clock_face_android_s_dp3">Android S DP3</string>
 
     <!-- Phone Info screen. Status label.  Used for diagnostic info screens, precise translation isn't needed -->
     <string name="radioInfo_service_in">In Service</string>
