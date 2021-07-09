@@ -194,6 +194,7 @@
     <string name="themes_title">Themes</string>
     <string name="themes_summary">Minimal Customisation</string>
     <string name="theme_customization_accent_color_title">Accent color presets</string>
+    <string name="theme_customization_font_title">Fonts</string>
 
     <!-- Power Button Fingerprint -->
     <string name="fingerprint_power_button_press_title">Press to unlock</string>
