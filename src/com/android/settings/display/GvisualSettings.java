@@ -57,13 +57,11 @@ public class GvisualSettings extends SettingsPreferenceFragment implements
          OnPreferenceChangeListener {
 
     private static final String PREF_ROUNDED_CORNER = "rounded_ui";
-    private static final String PREF_SB_HEIGHT = "statusbar_height";
     private static final String PREF_NB_COLOR = "navbar_color";
 
     private IOverlayManager mOverlayManager;
     private IOverlayManager mOverlayService;
     private ListPreference mRoundedUi;
-    private ListPreference mSbHeight;
     private ListPreference mnbSwitch;
 
     @Override
@@ -88,16 +86,6 @@ public class GvisualSettings extends SettingsPreferenceFragment implements
         }
         mRoundedUi.setSummary(mRoundedUi.getEntry());
         mRoundedUi.setOnPreferenceChangeListener(this);
-
-        mSbHeight = (ListPreference) findPreference(PREF_SB_HEIGHT);
-        int sbHeightValue = getOverlayPosition(ThemesUtils.STATUSBAR_HEIGHT);
-        if (sbHeightValue != -1) {
-            mSbHeight.setValue(String.valueOf(sbHeightValue + 2));
-        } else {
-            mSbHeight.setValue("1");
-        }
-        mSbHeight.setSummary(mSbHeight.getEntry());
-        mSbHeight.setOnPreferenceChangeListener(this);
     }
 
     public void handleOverlays(String packagename, Boolean state, IOverlayManager mOverlayManager) {
@@ -176,22 +164,8 @@ public class GvisualSettings extends SettingsPreferenceFragment implements
             if (roundedValue > 1) {
                 handleOverlays(ThemesUtils.UI_RADIUS[roundedValue -2],
                         true, mOverlayManager);
-        }
-        mRoundedUi.setSummary(mRoundedUi.getEntry());
-        return true;
-        } else if (preference == mSbHeight) {
-        String sbheight = (String) objValue;
-        int sbheightValue = Integer.parseInt(sbheight);
-        mSbHeight.setValue(String.valueOf(sbheightValue));
-        String overlayName = getOverlayName(ThemesUtils.STATUSBAR_HEIGHT);
-            if (overlayName != null) {
-                handleOverlays(overlayName, false, mOverlayManager);
             }
-            if (sbheightValue > 1) {
-                handleOverlays(ThemesUtils.STATUSBAR_HEIGHT[sbheightValue -2],
-                        true, mOverlayManager);
-        }
-        mSbHeight.setSummary(mSbHeight.getEntry());
+        mRoundedUi.setSummary(mRoundedUi.getEntry());
         return true;
         }
         return false;
