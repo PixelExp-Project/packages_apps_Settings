@@ -237,6 +237,7 @@
         <item>@string/lock_screen_custom_clock_face_octavi</item>
         <item>@string/lock_screen_custom_clock_face_android_s</item>
         <item>@string/lock_screen_custom_clock_face_android_s_dp3</item>
+        <item>@string/lock_screen_custom_clock_face_android_twelve</item>
     </string-array>
 
     <string-array name="lock_screen_custom_clock_face_values" translatable="false">
@@ -249,6 +250,7 @@
         <item>com.android.keyguard.clock.OctaviDigitalClockController</item>
         <item>com.android.keyguard.clock.AndroidSClockController</item>
         <item>com.android.keyguard.clock.AndroidSDP3ClockController</item>
+        <item>com.android.keyguard.clock.AndroidTwelveClockController</item>
     </string-array>
 
     <!-- Security settings.  The delay after screen is turned off until device locks.
