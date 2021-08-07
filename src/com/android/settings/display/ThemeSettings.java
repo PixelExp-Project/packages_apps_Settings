@@ -125,6 +125,8 @@ public class ThemeSettings extends DashboardFragment implements OnPreferenceChan
                 "android.theme.customization.font"));
         controllers.add(new OverlayCategoryPreferenceController(context,
                 "android.theme.customization.accent_color"));
+        controllers.add(new OverlayCategoryPreferenceController(context,
+                "android.theme.customization.icon_pack.android"));
         controllers.add(new QsTileStylePreferenceController(context));
         return controllers;
     }

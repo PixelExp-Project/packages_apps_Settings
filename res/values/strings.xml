@@ -12484,4 +12484,6 @@
     <string name="bluetooth_phonebook_access_dialog_title">Allow access to contacts and call log?</string>
     <!-- Bluetooth phonebook permission alert for dialog content [CHAR LIMIT=none] -->
     <string name="bluetooth_phonebook_access_dialog_content">An untrusted Bluetooth device, <xliff:g id="device_name" example="My device">%1$s</xliff:g>, wants to access your contacts and call log. This includes data about incoming and outgoing calls.\n\nYou haven\u2019t connected to <xliff:g id="device_name" example="My device">%2$s</xliff:g> before.</string>
+    <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the statusbar icon -->
+    <string name="theme_customization_sysui_icon_title">Icon pack</string>
 </resources>
