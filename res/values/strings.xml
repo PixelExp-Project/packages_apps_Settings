@@ -12497,4 +12497,8 @@
     <!-- global cleartext network traffic -->
     <string name="cleartext_network_policy_title">Restrict cleartext network traffic</string>
     <string name="cleartext_network_policy_summary">Blocks all non-TLS network traffic. Requires Private DNS configuration. Note: Without explicit exemptions, Tor and most VPNs won\'t work</string>
+
+    <!-- Media artwork blur -->
+    <string name="artwork_media_background_enable_blur_title">Enable to blur media artwork background</string>
+    <string name="artwork_media_background_blur_radius_title">Adjust the blur radius for artwork</string>
 </resources>

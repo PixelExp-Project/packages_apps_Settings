@@ -17,6 +17,7 @@
 package com.android.settings.custom.statusbar;
 
 import android.content.Context;
+import android.content.ContentResolver;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.format.DateFormat;
@@ -34,6 +35,8 @@ import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.custom.preference.SecureSettingListPreference;
 import com.android.settings.custom.preference.SystemSettingListPreference;
+import com.android.settings.custom.preference.SystemSettingSwitchPreference;
+import com.android.settings.custom.preference.SystemSettingSeekBarPreference;
 import com.android.settings.SettingsPreferenceFragment;
 
 import com.android.internal.util.custom.cutout.CutoutUtils;
@@ -56,6 +59,9 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private static final String STATUS_BAR_QUICK_QS_PULLDOWN = "qs_quick_pulldown";
     private static final String STATUS_BAR_QUICK_QS_SHOW_BRIGHTNESS_SLIDER = "qs_show_brightness_slider";
     private static final String STATUS_BAR_QUICK_QS_SHOW_AUTO_BRIGHTNESS = "qs_show_auto_brightness";
+    private static final String ARTWORK_MEDIA_BACKGROUND = "artwork_media_background";
+    private static final String ARTWORK_MEDIA_BACKGROUND_ENABLE_BLUR = "artwork_media_background_enable_blur";
+    private static final String ARTWORK_MEDIA_BACKGROUND_BLUR_RADIUS = "artwork_media_background_blur_radius";
 
     private static final int STATUS_BAR_BATTERY_STYLE_TEXT = 2;
 
@@ -78,6 +84,10 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private PreferenceCategory mStatusBarClockCategory;
     private PreferenceCategory mStatusBarBrightnessCategory;
 
+    private SystemSettingSwitchPreference martworkmedia;
+    private SystemSettingSwitchPreference markworkmediablur;
+    private SystemSettingSeekBarPreference markworkmediablurradius;
+
     private static boolean sHasCenteredNotch;
 
     @Override
@@ -86,6 +96,16 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.status_bar_settings);
 
         sHasCenteredNotch = CutoutUtils.hasCenteredCutout(getActivity());
+
+        martworkmedia = findPreference(ARTWORK_MEDIA_BACKGROUND);
+        markworkmediablur = findPreference(ARTWORK_MEDIA_BACKGROUND_ENABLE_BLUR);
+        markworkmediablurradius = findPreference(ARTWORK_MEDIA_BACKGROUND_BLUR_RADIUS);
+
+        if (Settings.System.getInt(getActivity().getContentResolver(),
+            Settings.System.ARTWORK_MEDIA_BACKGROUND, 0) == 0) {
+            markworkmediablur.setEnabled(false);
+            markworkmediablurradius.setEnabled(false);
+        }
 
         mStatusBarAmPm = findPreference(STATUS_BAR_AM_PM);
         mStatusBarClock = findPreference(STATUS_BAR_CLOCK_STYLE);
