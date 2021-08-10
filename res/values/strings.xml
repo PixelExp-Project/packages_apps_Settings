@@ -12501,4 +12501,8 @@
     <!-- Media artwork blur -->
     <string name="artwork_media_background_enable_blur_title">Enable to blur media artwork background</string>
     <string name="artwork_media_background_blur_radius_title">Adjust the blur radius for artwork</string>
+
+    <!-- Lock Icon -->
+    <string name="lockscreen_lock_icon_title">Lock icon</string>
+    <string name="lockscreen_lock_icon_summary">Display lock icon on the lockscreen</string>
 </resources>
