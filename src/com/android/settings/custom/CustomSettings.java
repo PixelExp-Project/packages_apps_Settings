@@ -43,6 +43,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
+import com.android.internal.util.custom.CustomUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,10 +52,20 @@ import java.util.List;
 public class CustomSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
+    private static final String INCALL_VIB_OPTIONS = "incall_vib_options";
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.custom_settings);
+
+        final ContentResolver resolver = getActivity().getContentResolver();
+        final PreferenceScreen prefSet = getPreferenceScreen();
+
+        PreferenceCategory incallVibCategory = (PreferenceCategory) findPreference(INCALL_VIB_OPTIONS);
+        if (!CustomUtils.isVoiceCapable(getActivity())) {
+                prefSet.removePreference(incallVibCategory);
+        }
     }
 
     @Override
