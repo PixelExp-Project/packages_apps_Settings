@@ -18,6 +18,10 @@
     <!-- Custom Settings -->
     <string name="custom_settings_title">Custom Settings</string>
     <string name="custom_settings_summary">Minimal Customization</string>
+    <string name="custom_statusbar_settings">Status Bar</string>
+
+    <!-- Status bar items -->
+    <string name="statusbar_items_category">Status bar items</string>
 
     <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Swipe to screenshot</string>
