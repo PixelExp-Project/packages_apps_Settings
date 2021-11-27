@@ -15,6 +15,10 @@
     <string name="usb_default_config_title">USB configuration</string>
     <string name="usb_default_config_summary">Choose the default behavior when connected to a device via USB</string>
 
+    <!-- Custom Settings -->
+    <string name="custom_settings_title">Custom Settings</string>
+    <string name="custom_settings_summary">Minimal Customization</string>
+
     <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Swipe to screenshot</string>
     <string name="three_finger_gesture_summary">Swipe down with three fingers to take a screenshot</string>
