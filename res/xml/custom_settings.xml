@@ -75,4 +75,17 @@
             android:defaultValue="false" />
 
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="custom_misc_settings"
+        android:title="@string/custom_misc_settings_category" >
+
+         <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="doze_pulse_on_double_tap"
+            android:title="@string/double_tap_on_doze_to_wake_title"
+            android:summary="@string/double_tap_on_doze_to_wake_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
