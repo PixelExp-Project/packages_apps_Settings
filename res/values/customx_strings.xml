@@ -13,6 +13,10 @@
     <!-- Status bar items -->
     <string name="statusbar_items_category">Status bar items</string>
 
+    <!-- Show LTE/4G switch -->
+    <string name="show_fourg_icon_title">Show 4G instead of LTE</string>
+    <string name="show_fourg_icon_summary">Replace LTE indicator with 4G</string>
+
     <!-- Three-fingers-swipe to screenshot -->
     <string name="swipe_to_screenshot_gesture_title">Swipe to screenshot</string>
     <string name="swipe_to_screenshot_gesture_summary">Swipe three fingers to take screenshot</string>
