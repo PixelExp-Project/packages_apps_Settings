@@ -19,19 +19,25 @@
         android:key="custom_statusbar_settings_category"
         android:title="@string/custom_statusbar_settings">
 
-    <Preference
-        android:key="systemui_tuner_statusbar"
-        android:title="@string/statusbar_items_category">
-        <intent android:action="android.intent.action.MAIN"
-            android:targetPackage="com.android.systemui"
-            android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
-    </Preference>
+         <Preference
+            android:key="systemui_tuner_statusbar"
+            android:title="@string/statusbar_items_category">
+            <intent android:action="android.intent.action.MAIN"
+              android:targetPackage="com.android.systemui"
+              android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
+         </Preference>
 
-    <com.android.settings.preference.SystemSettingSwitchPreference
-         android:key="show_fourg_icon"
-         android:title="@string/show_fourg_icon_title"
-         android:summary="@string/show_fourg_icon_summary"
-         android:defaultValue="false"/>
+         <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="show_fourg_icon"
+            android:title="@string/show_fourg_icon_title"
+            android:summary="@string/show_fourg_icon_summary"
+            android:defaultValue="false"/>
+
+         <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="qs_show_battery_estimate"
+            android:title="@string/qs_show_battery_estimate_title"
+            android:summary="@string/qs_show_battery_estimate_summary"
+            android:defaultValue="true"/>
 
     </PreferenceCategory>
 
