@@ -56,6 +56,7 @@ public class CustomSettings extends SettingsPreferenceFragment implements
     private static final String PREF_STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
     private static final String PREF_STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     private static final String PREF_HEADS_UP_TIME_OUT = "heads_up_time_out";
+    private static final String PREF_HEADS_UP_SNOOZE_TIME = "heads_up_snooze_time";
 
     private static final int BATTERY_STYLE_PORTRAIT = 0;
     private static final int BATTERY_STYLE_TEXT = 4;
@@ -66,6 +67,7 @@ public class CustomSettings extends SettingsPreferenceFragment implements
     private ListPreference mBatteryStyle;
     private int mBatteryPercentValue;
     private ListPreference mHeadsUpTimeOut;
+    private ListPreference mHeadsUpSnoozeTime;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -112,6 +114,15 @@ public class CustomSettings extends SettingsPreferenceFragment implements
                 Settings.System.HEADS_UP_TIMEOUT, defaultTimeOut);
         mHeadsUpTimeOut.setValue(String.valueOf(headsUpTimeOut));
         updateHeadsUpTimeOutSummary(headsUpTimeOut);
+
+        int defaultSnooze = systemUiResources.getInteger(systemUiResources.getIdentifier(
+                    "com.android.systemui:integer/heads_up_default_snooze_length_ms", null, null));
+        mHeadsUpSnoozeTime = (ListPreference) findPreference(PREF_HEADS_UP_SNOOZE_TIME);
+        mHeadsUpSnoozeTime.setOnPreferenceChangeListener(this);
+        int headsUpSnooze = Settings.System.getInt(getContentResolver(),
+                Settings.System.HEADS_UP_NOTIFICATION_SNOOZE, defaultSnooze);
+        mHeadsUpSnoozeTime.setValue(String.valueOf(headsUpSnooze));
+        updateHeadsUpSnoozeTimeSummary(headsUpSnooze);
     }
 
     @Override
@@ -142,19 +153,37 @@ public class CustomSettings extends SettingsPreferenceFragment implements
                     headsUpTimeOut);
             updateHeadsUpTimeOutSummary(headsUpTimeOut);
             return true;
+        } else if (preference == mHeadsUpSnoozeTime) {
+            int headsUpSnooze = Integer.valueOf((String) newValue);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.HEADS_UP_NOTIFICATION_SNOOZE,
+                    headsUpSnooze);
+            updateHeadsUpSnoozeTimeSummary(headsUpSnooze);
+            return true;
         }
         return false;
-    }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsEvent.CUSTOM_SETTINGS;
     }
 
     private void updateHeadsUpTimeOutSummary(int value) {
         String summary = getResources().getString(R.string.heads_up_time_out_summary,
                 value / 1000);
         mHeadsUpTimeOut.setSummary(summary);
+    }
+
+    private void updateHeadsUpSnoozeTimeSummary(int value) {
+        if (value == 0) {
+            mHeadsUpSnoozeTime.setSummary(getResources().getString(R.string.heads_up_snooze_disabled_summary));
+        } else if (value == 60000) {
+            mHeadsUpSnoozeTime.setSummary(getResources().getString(R.string.heads_up_snooze_summary_one_minute));
+        } else {
+            String summary = getResources().getString(R.string.heads_up_snooze_summary, value / 60 / 1000);
+            mHeadsUpSnoozeTime.setSummary(summary);
+        }
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        return MetricsEvent.CUSTOM_SETTINGS;
     }
 
     /**
