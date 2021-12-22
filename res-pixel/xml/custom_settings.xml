@@ -34,6 +34,12 @@
             android:defaultValue="false"/>
 
          <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="use_old_mobiletype"
+            android:title="@string/use_old_mobiletype_title"
+            android:summary="@string/use_old_mobiletype_summary"
+            android:defaultValue="true" />
+
+         <com.android.settings.preference.SystemSettingSwitchPreference
             android:key="qs_show_battery_estimate"
             android:title="@string/qs_show_battery_estimate_title"
             android:summary="@string/qs_show_battery_estimate_summary"
