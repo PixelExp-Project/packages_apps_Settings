@@ -27,6 +27,12 @@
               android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
          </Preference>
 
+         <Preference
+            android:key="traffic"
+            android:fragment="com.android.settings.custom.Traffic"
+            android:title="@string/traffic_title"
+            android:summary="@string/network_traffic_state_summary" />
+
          <com.android.settings.preference.SystemSettingSwitchPreference
             android:key="show_fourg_icon"
             android:title="@string/show_fourg_icon_title"
