@@ -18,6 +18,7 @@
     <string name="custom_statusbar_settings">Status Bar</string>
     <string name="custom_misc_settings_category">Misc</string>
     <string name="custom_notification_settings">Notification</string>
+    <string name="custom_lockscreen_settings">Lockscreen</string>
 
     <!-- Status bar items -->
     <string name="statusbar_items_category">Status bar items</string>
@@ -121,7 +122,6 @@
     <!-- Lock screen media artwork -->
     <string name="lockscreen_media_blur_title">Media art blur level</string>
     <string name="show_lockscreen_media_art_title">Show media art</string>
-    <string name="lockscreen_media_art_options_title">Lockscreen media art</string>
 
     <!-- Statusbar net monitor -->
     <string name="traffic_title">Traffic indicators</string>
@@ -142,5 +142,9 @@
     <string name="show_network_traffic_down">Download</string>
     <string name="show_network_traffic_all">Both</string>
     <string name="nettraf_font_size">Single net font size</string>
+
+    <!-- Keyguard force small clock -->
+    <string name="lockscreen_small_clock_title">Force small clock</string>
+    <string name="lockscreen_small_clock_summary">Don\'t switch to the big clock when there are no notifications</string>
 
 </resources>

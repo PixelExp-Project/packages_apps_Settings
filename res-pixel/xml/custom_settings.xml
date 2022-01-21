@@ -81,7 +81,13 @@
 
     <PreferenceCategory
         android:key="lockscreen_media_art_options"
-        android:title="@string/lockscreen_media_art_options_title" >
+        android:title="@string/custom_lockscreen_settings" >
+
+        <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="lockscreen_small_clock"
+            android:title="@string/lockscreen_small_clock_title"
+            android:summary="@string/lockscreen_small_clock_summary"
+            android:defaultValue="false" />
 
         <com.android.settings.preference.SystemSettingSwitchPreference
             android:key="show_lockscreen_media_art"
