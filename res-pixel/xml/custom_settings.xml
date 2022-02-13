@@ -159,6 +159,14 @@
             android:summary="@string/double_tap_on_doze_to_wake_summary"
             android:defaultValue="true" />
 
+         <!-- Display Cutout -->
+         <Preference
+            android:key="display_cutout_force_fullscreen_settings"
+            android:title="@string/display_cutout_force_fullscreen_title"
+            android:summary="@string/display_cutout_force_fullscreen_summary"
+            android:fragment="com.android.settings.custom.DisplayCutoutForceFullscreenSettings"
+            settings:controller="com.android.settings.custom.DisplayCutoutForceFullscreenPreferenceController" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
