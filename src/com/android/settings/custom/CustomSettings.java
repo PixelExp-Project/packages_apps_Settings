@@ -57,6 +57,7 @@ public class CustomSettings extends SettingsPreferenceFragment implements
     private static final String PREF_STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     private static final String PREF_HEADS_UP_TIME_OUT = "heads_up_time_out";
     private static final String PREF_HEADS_UP_SNOOZE_TIME = "heads_up_snooze_time";
+    private static final String KEY_FORCE_FULL_SCREEN = "display_cutout_force_fullscreen_settings";
 
     private static final int BATTERY_STYLE_PORTRAIT = 0;
     private static final int BATTERY_STYLE_TEXT = 4;
@@ -68,13 +69,16 @@ public class CustomSettings extends SettingsPreferenceFragment implements
     private int mBatteryPercentValue;
     private ListPreference mHeadsUpTimeOut;
     private ListPreference mHeadsUpSnoozeTime;
+    private Preference mShowCutoutForce;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.custom_settings);
+        Context mContext = getActivity().getApplicationContext();
         final ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefSet = getPreferenceScreen();
+	final String displayCutout = mContext.getResources().getString(com.android.internal.R.string.config_mainBuiltInDisplayCutout);
 
         PreferenceCategory incallVibCategory = (PreferenceCategory) findPreference(INCALL_VIB_OPTIONS);
         if (!CustomUtils.isVoiceCapable(getActivity())) {
@@ -123,6 +127,11 @@ public class CustomSettings extends SettingsPreferenceFragment implements
                 Settings.System.HEADS_UP_NOTIFICATION_SNOOZE, defaultSnooze);
         mHeadsUpSnoozeTime.setValue(String.valueOf(headsUpSnooze));
         updateHeadsUpSnoozeTimeSummary(headsUpSnooze);
+
+        if (TextUtils.isEmpty(displayCutout)) {
+            mShowCutoutForce = (Preference) findPreference(KEY_FORCE_FULL_SCREEN);
+            prefSet.removePreference(mShowCutoutForce);
+        }
     }
 
     @Override
