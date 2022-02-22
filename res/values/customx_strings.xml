@@ -161,6 +161,7 @@
     <string name="app_lock_footer_text">Bubbles will be automatically dismissed after timeout</string>
     <string name="enable_debugging">Enable debugging</string>
     <string name="disable_debugging">Disable debugging</string>
+    <string name="app_lock_biometrics_allowed_title">Enable biometrics for unlocking</string>
 
     <!-- Screen setting option title for the item to take you to the stock security screen -->
     <string name="aosp_security_settings_title">Stock lock options</string>
