@@ -33,10 +33,13 @@
     <string name="three_finger_gesture">Swipe to screenshot</string>
     <string name="three_finger_gesture_summary">Swipe down with three fingers to take a screenshot</string>
 
-    <!-- Gesture navbar length -->
+    <!-- Gesture navbar length & radius -->
     <string name="gesture_navbar_length_title">Pill length</string>
+    <string name="gesture_navbar_radius_title">Pill radius</string>
     <string name="short_label">Short</string>
     <string name="long_label">Long</string>
+    <string name="small_label">Small</string>
+    <string name="large_label">Large</string>
 
     <!-- Incall vibrate options -->
     <string name="incall_vibration_category">In-call vibration options</string>
