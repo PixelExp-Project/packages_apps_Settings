@@ -67,4 +67,8 @@
     <string name="face_unlock_method_title">Leiskite atrakinti veido atpažinimo funkcija užrakinimo ekrane</string>
     <string name="face_unlock_method_default">Įjungus ekraną </string>
     <string name="face_unlock_method_swipe">Perbraukus užrakto ekrane</string>
+    <string name="high_touch_polling_rate_title">Didelis lietimo jautrumas</string>
+    <string name="high_touch_polling_rate_summary">Padidinkite jutiklinio ekrano apklausų dažnį</string>
+    <string name="screen_off_fod_title">Atrakinimas pirštu antspaudu išjungtame ekrane</string>
+    <string name="screen_off_fod_summary">Naudokite pirštų atspaudų skaitytuvą, kai ekranas išjungtas</string>
 </resources>
