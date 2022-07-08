@@ -136,6 +136,12 @@
             android:summary="@string/toast_icon_summary"
             android:defaultValue="false" />
 
+         <com.android.settings.preference.SecureSettingSwitchPreference
+            android:key="window_ignore_secure"
+            android:title="@string/ignore_window_secure_title"
+            android:summary="@string/ignore_window_secure_summary"
+            android:defaultValue="false"/>
+
     </PreferenceCategory>
 
 </PreferenceScreen>
