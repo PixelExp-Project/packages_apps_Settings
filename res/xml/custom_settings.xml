@@ -125,6 +125,11 @@
             android:summary="@string/toast_icon_summary"
             android:defaultValue="false" />
 
+         <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="qs_show_battery_estimate"
+            android:title="@string/qs_show_battery_estimate_title"
+            android:summary="@string/qs_show_battery_estimate_summary"
+            android:defaultValue="true"/>
     </PreferenceCategory>
 
 </PreferenceScreen>
